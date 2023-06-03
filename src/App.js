@@ -8,12 +8,14 @@ import variant2 from "./assets/varian2.png";
 import variant3 from "./assets/variant3.png";
 import variant4 from "./assets/variant4.png";
 import variant5 from "./assets/variant5.png";
-import { Container, Divider, Flex, Text } from "@mantine/core";
+import ukuran from "./assets/ukuran.jpg";
+import wa from "./assets/iconwa.png";
+import { Button, Container, Divider, Flex, Text } from "@mantine/core";
 
 function App() {
   return (
     <div>
-      <Container size={"lg"}>
+      <Container size={"lg"} className="static">
         <Flex
           direction={"column"}
           justify={"center"}
@@ -26,6 +28,8 @@ function App() {
           <img src={hero} alt="hero" className="w-[700px]" />
         </Flex>
         <Divider my={"md"} />
+
+        {/* Content Product */}
         <Flex justify={"center"}>
           <Text size="24px" fw={"bolder"} align="center">
             🌸🌸 Shadira Dress 🌸🌸
@@ -111,7 +115,7 @@ function App() {
             <Text>Variant Smoke Grey</Text>
           </Flex>
         </Flex>
-        <Flex justify={"center"}>
+        <Flex justify={"center"} mt={"lg"}>
           <Text
             size="24px"
             align="center"
@@ -120,6 +124,61 @@ function App() {
             Ukuran
           </Text>
         </Flex>
+        <Flex justify={"center"} mt={"lg"}>
+          <img
+            src={ukuran}
+            alt="ukuran"
+            className="md:w-[800px] w-80 rounded-xl md:rounded-3xl"
+          />
+        </Flex>
+
+        {/* <Divider my={"md"} /> */}
+
+        {/* Produk Lainnya */}
+        {/* <Flex justify={"center"} mt={"lg"}>
+          <Text size="24px" fw={"bolder"} align="center">
+            Produk Lainnya
+          </Text>
+        </Flex> */}
+        {/* <Flex
+          mb={"lg"}
+          wrap={"wrap"}
+          gap={"md"}
+          justify={"center"}
+          align={"center"}
+        >
+          <Flex className="border w-80 h-80 flex-col rounded-xl p-3 justify-center items-center gap-2">
+            <img src={shadira} alt="shadira" className="h-60 object-contain" />
+            <Text fz={"md"} fw={"bolder"}>
+              Shadira Dress 2in1
+            </Text>
+          </Flex>
+          <Flex className="border w-80 h-80 flex-col rounded-xl p-3 justify-center items-center gap-2">
+            <img src={shadira} alt="shadira" className="h-60 object-contain" />
+            <Text fz={"md"} fw={"bolder"}>
+              Shadira Dress 2in1
+            </Text>
+          </Flex>
+          <Flex className="border w-80 h-80 flex-col rounded-xl p-3 justify-center items-center gap-2">
+            <img src={shadira} alt="shadira" className="h-60 object-contain" />
+            <Text fz={"md"} fw={"bolder"}>
+              Shadira Dress 2in1
+            </Text>
+          </Flex>
+        </Flex> */}
+        <a href="https://wa.me/6285246412783" target="_blank" rel="noreferrer">
+          <Flex justify={"center"} align={"center"} my={"lg"}>
+            <Button
+              h={60}
+              variant="outline"
+              color="white"
+              className="rounded-full bg-green-500 hover:bg-green-600 text-white border-green-600"
+            >
+              <img src={wa} alt="wa" className="w-10 m-5" />
+              <Text size="20px">Order via Whatsapp</Text>
+            </Button>
+          </Flex>
+        </a>
       </Container>
     </div>
   );
